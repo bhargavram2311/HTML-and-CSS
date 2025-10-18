@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Input Methods</title>
+        <style>
+            body {font-family:Arial,sans-serif;padding:20 px;}
+            input,button {margin:10px 0;display:block;}
+            #output {margin-top:20px;font-weight:bold;}
+        </style>
+    </head>
+    <body>
+        <h1>Ways to Take Input in JavaScript</h1>
+        <!--1.Text Input Field-->
+        <label>Enter you Name:</label>
+        <input type="text" id="nameinput">
+        <button onclick="getinputFromField()">Submit Name</button>
+        <!--2.Prompt box-->
+        <button onclick="getinputFromPrompt()">Enter Age (Prompt)</button>
+        <!--3.Form Input-->
+         <form onsubmit="getinputFromForm(event)">
+            <label>Enter your email:</label>
+            <input type="email" id="emailinput">
+            <button type="submit">Submit Email</button>
+         </form>
+         <script>
+            //1.Input from text field
+            function getinputFromField()
+            {
+                const name=document.getElementByld("nameInput").value;
+                document.getElementById("output").innerText="Name:"+name;
+            }
+            //Input from prompt box
+            function getInputFromPrompt(){
+                const age=prompt("Please enter your age:");
+                document.getElementByld("output").innerText="Age:"+age;
+            }
+            //3.Input from form
+            function getInputFromForm(event)
+            {
+                event.prevent
+            }
+         </script>
+    </body>
+</html>
